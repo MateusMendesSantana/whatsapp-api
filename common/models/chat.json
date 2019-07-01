@@ -1,0 +1,25 @@
+{
+  "name": "chat",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "createdAt": {
+      "type": "date",
+      "defaultFn": "now",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "messages": {
+      "type": "hasMany",
+      "model": "Message",
+      "foreignKey": "chatId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

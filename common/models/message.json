@@ -1,0 +1,47 @@
+{
+  "name": "message",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "isVisualized": {
+      "type": "boolean",
+      "defaultFn": "false"
+    },
+    "visualizedAt": {
+      "type": "date",
+      "defaultFn": "now",
+      "required": true
+    },
+    "isReceived": {
+      "type": "boolean",
+      "defaultFn": "false"
+    },
+    "receivedAt": {
+      "type": "date",
+      "defaultFn": "now",
+      "required": true
+    },
+    "createdAt": {
+      "type": "date",
+      "defaultFn": "now",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "chat": {
+      "type": "belongsTo",
+      "model": "Chat",
+      "foreignKey": "chatId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

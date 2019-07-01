@@ -1,0 +1,19 @@
+{
+  "name": "status",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "createdAt": {
+      "type": "date",
+      "defaultFn": "now",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

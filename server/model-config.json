@@ -34,5 +34,25 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "chat": {
+    "dataSource": "db",
+    "public": true
+  },
+  "message": {
+    "dataSource": "db",
+    "public": true
+  },
+  "user": {
+    "dataSource": "db",
+    "public": true
+  },
+  "status": {
+    "dataSource": "db",
+    "public": true
+  },
+  "contact": {
+    "dataSource": "db",
+    "public": true
   }
 }
